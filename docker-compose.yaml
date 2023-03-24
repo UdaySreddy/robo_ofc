@@ -16,5 +16,14 @@ services:
    depends_on:
    - mongodb
  mongodb:
-  image: mongodb:v1
-  container_name: mongodb
+   image: mongodb:v1
+   container_name: mongodb
+ user:
+   image: user:v1
+   container_name: user
+   depends_on: 
+   - mongodb
+   - redis
+ redis:
+   image: redis
+   container_name: redis
