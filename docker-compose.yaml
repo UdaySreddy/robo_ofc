@@ -4,12 +4,12 @@ services:
   image: web:v1
   container_name: web
   depends_on: 
-  - catalogue
+  - catalogues
 catalogue:
   image: catalogue:v1
   container_name: catalogue
   depends_on:
   - mongobd
 mongodb:
-  image: mongodc
+  image: mongodb
   container_name: mongodb
