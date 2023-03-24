@@ -10,11 +10,11 @@ services:
   - catalogues
   ports:
     - 80:80
-  catalogue:
-    image: catalogue:v1
-    container_name: catalogue
-    depends_on:
-    - mongobd
-  mongodb:
-    image: mongodb
-    container_name: mongodb
+ catalogue:
+  image: catalogue:v1
+  container_name: catalogue
+  depends_on:
+  - mongobd
+ mongodb:
+  image: mongodb
+  container_name: mongodb
