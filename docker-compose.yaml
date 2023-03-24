@@ -1,0 +1,15 @@
+version: '1.0'
+services:
+ web:
+  image: web:v1
+  container_name: web
+  depends_on: 
+  - catalogue
+catalogue:
+  image: catalogue:v1
+  container_name: catalogue
+  depends_on:
+  - mongobd
+mongodb:
+  image: mongodc
+  container_name: mongodb
