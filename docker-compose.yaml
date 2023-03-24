@@ -5,11 +5,11 @@ services:
   container_name: web
   depends_on: 
   - catalogues
-catalogue:
-  image: catalogue:v1
-  container_name: catalogue
-  depends_on:
-  - mongobd
-mongodb:
-  image: mongodb
-  container_name: mongodb
+  catalogue:
+    image: catalogue:v1
+    container_name: catalogue
+    depends_on:
+    - mongobd
+  mongodb:
+    image: mongodb
+    container_name: mongodb
