@@ -1,10 +1,15 @@
 version: '1.0'
+networks:
+  roboshop:
+    driver: bridge
 services:
  web:
   image: web:v1
   container_name: web
   depends_on: 
   - catalogues
+  ports:
+    - 80:80
   catalogue:
     image: catalogue:v1
     container_name: catalogue
